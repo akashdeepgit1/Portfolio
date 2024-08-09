@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Akash's Portfolio</a>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="Profile Image">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Akash</span>
+                <nspan>Deep Singh T</nspan>
+            </h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>Welcome to my portfolio! I'm a Web Developer, Editor and Graphic Designer with a passion for creating visually compelling and functionally robust digital experiences. With expertise in both the creative and technical aspects of design, I bring
+                ideas to life through innovative solutions. Whether you're looking for polished content editing, striking graphic designs, or a well-crafted website, I'm here to help turn your vision into reality.
+
+            </p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/akashdeepsinght"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/akashdeepgit1"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/thesky._.vibes"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="mailto:akashdeepmail1@gmail.com" class="btn">Hire me</a>
+            <a href="https://drive.google.com/drive/folders/1V23feMQesiYus39qzPxOMdO3p1WB5jr9?usp=sharing" class="btn" target="_blank">Resume</a>
+        </div>
+
+
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Services</h2>
+        <div class="service-list">
+            <div class="service">
+                <h3>Web Development</h3>
+                <p>Creating responsive and modern websites.</p>
+            </div>
+            <!--
+            <div class="service">
+                <h3>UI/UX Design</h3>
+                <p>Designing intuitive and engaging user interfaces.</p>
+            </div> -->
+            <div class="service">
+                <h3>Editing</h3>
+                <p>Creating professional and engaging video edits.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <h2>Education</h2>
+        <div class="education-list">
+            <div class="education-item">
+                <h3>Bachelor's in Information Science & Engineering</h3>
+                <h3>CGPA: 7.76</h3>
+                <p>Dayananda Sagar Academy of Technology and Management, 2025</p>
+            </div>
+            <div class="education-item">
+                <h3>12th</h3>
+                <h3>Percentage: 99.33%</h3>
+                <p>Ascent PU college, 2021</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <h2>Experience</h2>
+        <div class="experience-list">
+            <div class="experience-item">
+                <h3>Front-end Developer Intern</h3>
+                <p>Varcons Technologies, 2023</p>
+            </div>
+            <div class="experience-item">
+                <h3>Head of Media</h3>
+                <p>DSATM College, 2023 - Present</p>
+            </div>
+            <div class="experience-item">
+                <h3>Cultural Core Committe Member</h3>
+                <p>Cultural Dept., DSATM College, 2023 - Present</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me!</p>
+        <form action="https://formspree.io/f/xwpebbvr" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+    </section>
+    <script>
+        document.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            let index = sections.length;
+
+            while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+            navLinks.forEach((link) => link.classList.remove('active'));
+            navLinks[index].classList.add('active');
+        });
+    </script>
+
+
+</body>
+
+</html>
